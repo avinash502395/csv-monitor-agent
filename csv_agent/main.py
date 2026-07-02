@@ -323,7 +323,7 @@ PAGE = """
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSV Monitor Agent</title>
+<title>Data Monitor Agent</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -404,7 +404,7 @@ PAGE = """
     <div class="brand">
       <div class="mark">M</div>
       <div>
-        <h1>CSV Monitor Agent</h1>
+        <h1>Data Monitor Agent</h1>
         <div class="role">AI change monitoring</div>
       </div>
     </div>
