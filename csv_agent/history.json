@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2026-07-02 15:05:07",
+    "filename": "Untitled spreadsheet",
+    "added": 1,
+    "removed": 0,
+    "summary": "SUMMARY: The shared Google Sheet CSV has been updated with a new row.\n\nCHANGES:\n- One new row added with id 6, task \"NON IT\", status \"In Progress\", and owner \"RAJU\".\n- No rows removed.\n\nKEY OBSERVATION: The new task \"NON IT\" is in progress, which may indicate a new non-IT project.\n\nACTION NEEDED: Review the new task \"NON IT\" and ensure it is properly prioritized and resourced."
+  },
+  {
+    "timestamp": "2026-07-02 15:02:31",
+    "filename": "Untitled spreadsheet",
+    "added": 1,
+    "removed": 1,
+    "summary": "Subject: Update in Task Status\n\nSUMMARY: The status of task \"Migrate Support\" has been updated.\n\nCHANGES:\n- Task \"Migrate Support\" status changed from \"In Progress\" to \"Completed\".\n- Owner \"ram\" remains the same for the task.\n\nKEY OBSERVATION: The task \"Migrate Support\" has been completed, indicating progress in the migration efforts.\n\nACTION NEEDED: Review the updated task status and verify completion with owner \"ram\"."
+  },
+  {
+    "timestamp": "2026-07-02 14:06:24",
+    "filename": "Untitled spreadsheet",
+    "added": 1,
+    "removed": 0,
+    "summary": "Subject: Update in Task List\n\nSUMMARY: A new task has been added to the shared Google Sheet.\n\nCHANGES:\n- One new row added with id 4\n- Task \"Migrate Support\" has been marked as completed\n- Owner of the new task is \"ram\"\n\nKEY OBSERVATION: The new task was completed immediately after addition, which is unusual.\n\nACTION NEEDED: Review the \"Migrate Support\" task to verify its completion status."
+  },
+  {
+    "timestamp": "2026-07-02 12:09:04",
+    "filename": "test_v2.csv",
+    "added": 1,
+    "removed": 0,
+    "summary": "SUMMARY: A new task has been added to the CSV file.\n\nCHANGES:\n- Added task \"Migrate Support\" with id 5 and owner Raju\n\nKEY OBSERVATION: The number of completed tasks is increasing, while pending tasks remain unchanged.\n\nACTION NEEDED: Review the new task and ensure it aligns with overall project goals."
+  },
+  {
+    "timestamp": "2026-07-02 11:59:17",
+    "filename": "test_v2.csv",
+    "added": 3,
+    "removed": 2,
+    "summary": "SUMMARY: The CSV file has been updated with one new row and two updated rows replacing the previous versions.\n\nCHANGES:\n- Added row: id 4, task Migrate Payroll, status Pending, owner Avinash\n- Added row: id 2, task Migrate HR, status Completed, owner Suresh\n- Added row: id 3, task Migrate IT, status In Progress, owner Anantha\n- Removed row: id 2, task Migrate HR, status In Progress, owner Suresh\n- Removed row: id 3, task Migrate IT, status Pending, owner Anantha\n\nKEY OBSERVATION: The status of tasks Migrate HR and Migrate IT have been updated to reflect progress.\n\nACTION NEEDED: Review the updated task status and assign necessary resources to pending tasks."
+  }
+]

@@ -1,0 +1,9 @@
+csv_agent/.env
+csv_agent/token.json
+csv_agent/memory.json
+csv_agent/history.json
+csv_agent/config.json
+csv_agent/current.csv
+csv_agent/*.csv
+__pycache__/
+*.pyc
