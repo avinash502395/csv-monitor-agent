@@ -70,8 +70,41 @@ def save_config(file_url, file_name):
 # ---------- Google Auth ----------
 def get_drive_service():
     creds = None
-    if os.path.exists(TOKEN_PATH):
+    token_json = os.getenv("GOOGLE_TOKEN_JSON")
+    if token_json:
+        creds = Credentials.from_authorized_user_info(json.loads(token_json), SCOPES)
+    elif os.path.exists(TOKEN_PATH):
         creds = Credentials.from_authorized_user_file(TOKEN_PATH, SCOPES)
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            client_config = {
+                "installed": {
+                    "client_id": GOOGLE_CLIENT_ID,
+                    "client_secret": GOOGLE_CLIENT_SECRET,
+                    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+                    "token_uri": "https://oauth2.googleapis.com/token",
+                    "redirect_uris": ["urn:ietf:wg:oauth:2.0:oob", "http://localhost"]
+                }
+            }
+            flow = InstalledAppFlow.from_client_config(client_config, SCOPES)
+            flow.redirect_uri = "urn:ietf:wg:oauth:2.0:oob"
+            auth_url, _ = flow.authorization_url(
+                prompt="consent",
+                access_type="offline",
+                login_hint="ramsaiavinash13@gmail.com"
+            )
+            print("\n👉 Open this URL in your browser:")
+            print(auth_url)
+            print()
+            code = input("Paste the authorization code here: ")
+            flow.fetch_token(code=code)
+            creds = flow.credentials
+        if not os.getenv("GOOGLE_TOKEN_JSON"):
+            with open(TOKEN_PATH, "w") as f:
+                f.write(creds.to_json())
+    return build("drive", "v3", credentials=creds)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
